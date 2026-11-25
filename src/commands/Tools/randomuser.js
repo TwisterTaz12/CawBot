@@ -98,7 +98,7 @@ export default {
             { name: 'Bot', value: user.bot ? 'Yes' : 'No', inline: true },
             { name: `Roles (${roles.length})`, value: roles.length > 0 ? roles.slice(0, 5).join('') + (roles.length > 5 ? `+${roles.length - 5} more` : '') : 'No roles', inline: false }
         )
-        .setColor('primary');
+        .setColor(primary);
 
         const row = new ActionRowBuilder()
             .addComponents(
@@ -164,7 +164,7 @@ export default {
                     { name: 'Bot', value: newUser.bot ? 'Yes' : 'No', inline: true },
                     { name: `Roles (${newRoles.length})`, value: newRoles.length > 0 ? newRoles.slice(0, 5).join('') + (newRoles.length > 5 ? `+${newRoles.length - 5} more` : '') : 'No roles', inline: false }
                 )
-                .setColor(newSelectedMember.displayHexColor);
+                .setColor(newSelectedMember.displayHexColor || '#3498db');
 
                 await i.update({
                     content: shouldMention ? `${newSelectedMember}, you've been chosen!` : null,
