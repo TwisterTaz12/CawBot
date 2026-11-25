@@ -24,7 +24,7 @@ export const botConfig = {
     activities: [
       {
         name: "Custom Status", // required by Discord API, not shown in the client
-        state: "Cawing along",     // this is what people actually see
+        state: "caw cacaww caw crawww",     // this is what people actually see
         type: 4,               // Custom
       },
     ],
@@ -61,7 +61,8 @@ export const botConfig = {
   applications: {
     // Default questions shown when someone fills out an application.
     defaultQuestions: [
-      { question: "What is your name?", required: true },
+      { question: "How did you join? Ex: Disboard, Discadia, Partnership (Specify Server), Friend Invite (Specify Username)", required: true },
+      { question: "Are you a Furry?", required: true },
       { question: "How old are you?", required: true },
       { question: "Why do you want to join?", required: true },
     ],
@@ -74,7 +75,7 @@ export const botConfig = {
     },
 
     // How long users must wait before submitting another application (hours).
-    applicationCooldown: 24,
+    applicationCooldown: 0,
 
     // Auto-delete denied applications after this many days.
     deleteDeniedAfter: 7,
@@ -141,7 +142,7 @@ export const botConfig = {
     },
     footer: {
       // Default footer text used in bot embeds.
-      text: "Titan Bot",
+      text: "CawBot",
       // Footer icon URL (null = no icon).
       icon: null,
     },
@@ -161,11 +162,11 @@ export const botConfig = {
   economy: {
     currency: {
       // Currency display name.
-      name: "coins",
+      name: "Gold",
       // Plural display name.
-      namePlural: "coins",
+      namePlural: "Gold",
       // Currency symbol shown in balances.
-      symbol: "$",
+      symbol: "G",
     },
 
     // Starting balance for new users.
@@ -175,7 +176,7 @@ export const botConfig = {
     baseBankCapacity: 100000,
 
     // Daily reward amount.
-    dailyAmount: 100,
+    dailyAmount: 1000,
 
     // Work command random payout range.
     workMin: 10,
@@ -302,7 +303,7 @@ export const botConfig = {
   // =========================
   verification: {
     // Message shown when posting the verification panel.
-    defaultMessage: "Click the button below to verify yourself and gain access to the server!",
+    defaultMessage: "Click the button below to gain access to the server!",
 
     // Text on the verification button.
     defaultButtonText: "Verify",
